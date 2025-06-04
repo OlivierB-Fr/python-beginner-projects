@@ -106,7 +106,7 @@ def get_index_from_title(title):
 # In[9]:
 
 
-movie_user_likes = "Avatar"
+movie_user_likes = str(input("Movie ? "))
 movie_index = get_index_from_title(movie_user_likes)
 similar_movies = list(
     enumerate(cosine_sim[movie_index])
@@ -137,7 +137,7 @@ print("Top 5 similar movies to " + movie_user_likes + " are:\n")
 for element in sorted_similar_movies:
     print(get_title_from_index(element[0]))
     i = i + 1
-    if i > 5:
+    if i > 4:
         break
 
 
